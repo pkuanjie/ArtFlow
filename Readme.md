@@ -2,7 +2,7 @@
 Official [PyTorch](https://pytorch.org) implementation of the paper:
 
 [**ArtFlow: Unbiased Image Style Transfer via Reversible Neural Flows**](arxiv_link)  
-[Jie An<sup>*</sup>](https://www.cs.rochester.edu/u/jan6/), [Siyu Huang<sup>*</sup>](https://siyuhuang.github.io), [Yibing Song](https://ybsong00.github.io), [Dejing Dou](https://ix.cs.uoregon.edu/~dou/), [Wei Liu](https://sse.cuhk.edu.cn/en/faculty/liuwei) and [Jiebo Luo](https://www.cs.rochester.edu/u/jluo/) 
+[Jie An<sup>*</sup>](https://www.cs.rochester.edu/u/jan6/), [Siyu Huang<sup>*</sup>](https://siyuhuang.github.io), [Yibing Song](https://ybsong00.github.io), [Dejing Dou](https://ix.cs.uoregon.edu/~dou/), [Wei Liu](https://sse.cuhk.edu.cn/en/faculty/liuwei) and [Jiebo Luo](https://www.cs.rochester.edu/u/jluo/)  
 CVPR 2021
 
 ArtFlow is a universal style transfer method that consists of reversible neural flows and an unbiased feature transfer module. ArtFlow adopts a projection-transfer-reversion scheme instead of the encoder-transfer-decoder to avoid the content leak issue of existing style transfer methods and consequently achieves unbiased style transfer in continuous style transfer.
