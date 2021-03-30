@@ -8,13 +8,11 @@ CVPR 2021
 ArtFlow is a universal style transfer method that consists of reversible neural flows and an unbiased feature transfer module. ArtFlow adopts a projection-transfer-reversion scheme instead of the encoder-transfer-decoder to avoid the content leak issue of existing style transfer methods and consequently achieves unbiased style transfer in continuous style transfer.
 
 ## Style Transfer Examples
----
 <p align='center'>
  <img alt='Style Transfer Examples' src='figs/result.png'>
 </p>
 
 ## Content Leak Phenomenons
----
 When we continuously perform style transfer with a style transfer algorithm, the produced result will gradually lose the detail of the content image. The code in this repository solves this problem.
 
 <p align='center'>
@@ -22,14 +20,12 @@ When we continuously perform style transfer with a style transfer algorithm, the
 </p>
 
 ## Artistic Portrait Style Transfer Examples
----
 We also train a model with the [FFHQ](https://github.com/NVlabs/ffhq-dataset) dataset as the content and [Metfaces](https://github.com/NVlabs/metfaces-dataset) as the style to convert a portrait photo into an artwork.
 <p align='center'>
  <img alt='Portrait Style Transfer' src='figs/portrait.png' width='400'>
 </p>
 
 ## Dependencies
----
 * Python=3.6
 * PyTorch=1.8.1
 * CUDA=10.2
@@ -42,7 +38,6 @@ conda env create -f environment.yaml
 ```
 
 ## Usage
----
 If you want to use the pre-trained model to perform style transfer, please download the pre-trained models in [Google Drive](https://drive.google.com/drive/folders/1w2fHgSBYwjplfeCXI8eOGYpi69CpJBTE?usp=sharing) and put the downloaded `experiments` directory under the root of this repository. Then execute the following command in the root of the repository.
 
 ### Style Transfer
@@ -68,7 +63,6 @@ CUDA_VISIBLE_DEVICES=0 python3 continuous_transfer.py --content_dir data/content
 All parameters are the same as the style transfer part above.
 
 ## Testing
----
 To test the style transfer performance of the pre-trained model with the given content and style images under `data` directory. Please run the following commands:
 ### ArtFlow + AdaIN
 ```
@@ -83,7 +77,6 @@ bash test_wct.sh
 The style transfer results will be saved in `output_ArtFlow-WCT`.
 
 ## Training
----
 To train ArtFlow by yourself. Please firstly download the Imagenet pre-trained VGG19 model from [Google Drive](https://drive.google.com/drive/folders/1ecTshAlTsLf7i3oyN2ntyEPEeIoxUDu9?usp=sharing) and put the downloaded `models` directory under the root of the repository. Then run the following commands.
 ```
 CUDA_VISIBLE_DEVICES=0 python3 -u train.py --content_dir $training_content_dir --style_dir $training_style_dir --n_flow 8 --n_block 2 --operator adain --save_dir $param_save_dir --batch_size 4
@@ -113,7 +106,6 @@ bash train_wct.sh
 Please note that you may need to change the path of the train content and style datasets in the above two bash scripts.
 
 ## Citation
----
 ```
 @inproceedings{artflow2021,
  title={ArtFlow: Unbiased image style transfer via reversible neural flows},
@@ -124,10 +116,8 @@ Please note that you may need to change the path of the train content and style 
 ```
 
 ## Acknowledgement
----
 We thank the great work [Glow](https://github.com/openai/glow), [AdaIN](https://github.com/xunhuang1995/AdaIN-style) and [WCT](https://github.com/Yijunmaverick/UniversalStyleTransfer) as we benefit a lot from their codes and papers.
 
 ## Contact
----
 If you have any questions, please do not hesitate to contact <jan6@cs.rochester.edu> and <siyu.huang@ntu.edu.sg>.
 
